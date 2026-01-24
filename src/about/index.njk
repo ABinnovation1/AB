@@ -1,0 +1,114 @@
+---
+layout: base.njk
+title: About Us
+---
+
+<section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-slate-900 to-black text-white">
+  <div class="absolute inset-y-0 right-0 w-1/2 opacity-30" style="background-image: url('https://images.unsplash.com/photo-1580894908362-967195033215?w=1200&h=900&fit=crop'); background-size: cover; background-position: center;"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10 grid lg:grid-cols-2 gap-12">
+    <div class="space-y-6 fade-up">
+      <p class="uppercase tracking-widest text-xs text-blue-200">A&B Innovation  Origins</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Engineering spaces that feel secure, connected, and alive.</h1>
+      <p class="text-gray-200 text-lg">A&B Innovation was born in Kigali with one belief: physical environments should feel as intentional as the digital products they host. From private villas to national banks, we design experiences that inspire trust.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/gallery/" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold shadow hover:-translate-y-0.5 transition">See our work</a>
+        <a href="/contact/" class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition">Meet the team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10">
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="space-y-6 fade-up">
+      <p class="uppercase tracking-widest text-xs text-blue-500">Our manifesto</p>
+      <h2 class="text-3xl font-bold text-gray-900">Technology should feel human.</h2>
+      <p class="text-gray-600">We merge craftsmanship with software sensibilities. Rack layouts mimic art galleries, user flows drive camera placement, and clients receive playbooks for every install.</p>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="p-4 border border-gray-200 rounded-2xl bg-white">
+          <p class="text-sm uppercase tracking-widest text-blue-500">DNA</p>
+          <p class="text-lg font-semibold text-gray-900">Design, Safety, Continuity</p>
+        </div>
+        <div class="p-4 border border-gray-200 rounded-2xl bg-white">
+          <p class="text-sm uppercase tracking-widest text-blue-500">Region</p>
+          <p class="text-lg font-semibold text-gray-900">East & Central Africa</p>
+        </div>
+      </div>
+    </div>
+    <div class="rounded-3xl overflow-hidden shadow-xl fade-up fade-delay-2">
+      <img src="/assets/product/about/about.png" alt="A&B Innovation  team" class="w-full h-full object-cover">
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="uppercase tracking-widest text-xs text-blue-500">Leadership</p>
+      <h2 class="text-3xl font-bold text-gray-900 mt-3">A multidisciplinary team built for bold deployments.</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {% set leaders = [
+        {name: "Aimee Uwase", role: "Founder & CEO", desc: "Architecting A&B Innovation 's vision across engineering, design, and client success.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop"},
+        {name: "Samuel Karemera", role: "Chief Technology Officer", desc: "Leads R&D for CCTV analytics, networking, and integrated platforms.", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=600&fit=crop"},
+        {name: "Diane Mugabo", role: "Director of Operations", desc: "Runs deployment squads, quality assurance, and aftercare programs.", image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=600&h=600&fit=crop"}
+      ] %}
+      {% for leader in leaders %}
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 flex flex-col fade-up fade-delay-{{ loop.index }}">
+        <img src="{{ leader.image }}" alt="{{ leader.name }}" class="h-64 w-full object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <h3 class="text-2xl font-semibold text-gray-900">{{ leader.name }}</h3>
+          <p class="text-blue-600 font-semibold">{{ leader.role }}</p>
+          <p class="text-gray-600 flex-1">{{ leader.desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+  <div class="text-center">
+    <p class="uppercase tracking-widest text-xs text-blue-500">Culture</p>
+    <h2 class="text-3xl font-bold text-gray-900">Principles guiding every install.</h2>
+  </div>
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="rounded-3xl overflow-hidden shadow-xl fade-up">
+      <div class="relative pb-[56.25%]">
+        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/qkJGEc0Y868" title="A&B Innovation  walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="p-6 bg-white">
+        <p class="uppercase text-xs tracking-widest text-blue-500">Look inside</p>
+        <h3 class="text-2xl font-semibold text-gray-900 mt-2">Design clarity in action</h3>
+        <p class="text-gray-600 mt-2">Watch how we model wiring diagrams, 3D visualizations, and handoff kits so future crews inherit excellence.</p>
+      </div>
+    </div>
+    <div class="rounded-3xl overflow-hidden shadow-xl fade-up fade-delay-2">
+      <div class="relative pb-[56.25%]">
+        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/p4n8y9Wk3dE" title="A&B Innovation  culture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="p-6 bg-white">
+        <p class="uppercase text-xs tracking-widest text-blue-500">Behind the scenes</p>
+        <h3 class="text-2xl font-semibold text-gray-900 mt-2">Transparency & lifetime partnership</h3>
+        <p class="text-gray-600 mt-2">Daily build logs, remote monitoring, and response teams keep clients updated and confident.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-blue-900 text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div class="space-y-4 fade-up">
+      <p class="uppercase text-xs tracking-widest text-blue-200">Join the movement</p>
+      <h2 class="text-3xl font-bold">Want to build unforgettable environments?</h2>
+      <p class="text-blue-100">Create places people remember long after they leave.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:-translate-y-0.5 transition">Start a conversation</a>
+        <a href="/products/" class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition">Explore our toolkit</a>
+      </div>
+    </div>
+    <div class="rounded-3xl overflow-hidden shadow-xl fade-up fade-delay-2">
+      <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&h=900&fit=crop" alt="A&B Innovation  culture" class="w-full h-full object-cover">
+    </div>
+  </div>
+</section>

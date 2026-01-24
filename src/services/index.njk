@@ -1,0 +1,118 @@
+---
+layout: base.njk
+title: Services
+---
+
+<section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-slate-900 to-black text-white">
+  <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.25), transparent 55%);"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
+    <div class="space-y-6">
+      <p class="uppercase tracking-widest text-xs text-blue-200">A&B Innovation  service stack</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Immersive infrastructure engineered for spaces that never stop.</h1>
+      <p class="text-lg text-gray-200">Our multidisciplinary crews deliver CCTV, networking, HVAC, fire safety, security, power, and digital experiences as a single orchestrated engagement.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold shadow hover:-translate-y-0.5 transition">Plan a project</a>
+        <a href="/products/" class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition">Browse hardware</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+  <div class="text-center max-w-3xl mx-auto">
+    <p class="uppercase tracking-widest text-xs text-blue-500">Integrated expertise</p>
+    <h2 class="text-3xl font-bold text-gray-900 mt-4">Every environment receives a cross-functional squad.</h2>
+    <p class="text-gray-600 mt-3">We blend installers, software engineers, and service designers to make sure technology looks intentional, runs resiliently, and is ready for growth.</p>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="rounded-3xl bg-white shadow-lg border border-gray-100 p-6 space-y-3">
+      <p class="text-sm uppercase tracking-widest text-blue-500">01 - Discovery</p>
+      <h3 class="text-xl font-semibold text-gray-900">Experience-first design</h3>
+      <p class="text-gray-600">Journey mapping, floor sensing, and visual mood boards so stakeholders can feel the deployment before cables appear.</p>
+    </div>
+    <div class="rounded-3xl bg-white shadow-lg border border-gray-100 p-6 space-y-3">
+      <p class="text-sm uppercase tracking-widest text-blue-500">02 - Build</p>
+      <h3 class="text-xl font-semibold text-gray-900">Premium installation</h3>
+      <p class="text-gray-600">Clean racks, labeled runs, and factory-calibrated devices delivered by safety-certified technicians.</p>
+    </div>
+    <div class="rounded-3xl bg-white shadow-lg border border-gray-100 p-6 space-y-3">
+      <p class="text-sm uppercase tracking-widest text-blue-500">03 - Operate</p>
+      <h3 class="text-xl font-semibold text-gray-900">Always-on care</h3>
+      <p class="text-gray-600">Remote monitoring, predictive maintenance, and playbooks for facility teams to run confidently.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-10">
+      <div>
+        <p class="uppercase tracking-widest text-xs text-blue-500">Service catalog</p>
+        <h2 class="text-3xl font-bold text-gray-900 mt-3">Choose a mission, we handle the rest.</h2>
+      </div>
+      <a href="/contact/" class="mt-6 md:mt-0 inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:-translate-y-0.5 transition">Book a technical survey</a>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {% set services = [
+        {title: "CCTV & Command", body: "4K domes, PTZ towers, SOC dashboards, and AI alerts for campuses, retail, and estates.", link: "/services/cctv/", image: "/assets/product/service/cctv.jpg"},
+        {title: "Enterprise Networking", body: "Fiber backbones, Wi-Fi 6 design, Starlink redundancy, and SD-WAN security.", link: "/services/network/", image: "/assets/product/service/network.jpg"},
+        {title: "Security & Access", body: "Biometrics, visitor management, intrusion alarms, and control room orchestration.", link: "/services/security/", image: "/assets/product/service/fingerprint.jpg"},
+        {title: "HVAC & Air Quality", body: "Split units, ducted systems, smart thermostats, and energy analytics for comfort.", link: "/services/hvac/", image: "/assets/product/service/air.jpg"},
+        {title: "Fire & Safety", body: "Addressable panels, smoke and gas detection, evacuation lighting, and drills.", link: "/services/fire/", image: "/assets/product/service/alarm.png"},
+        {title: "Power & Generators", body: "Sizing, installation, ATS integration, and remote diagnostics for clean power.", link: "/services/generator/", image: "/assets/product/service/generator.png"},
+        {title: "Digital & Web", body: "Web platforms, intranets, and dashboards that extend physical investments online.", link: "/services/webdev/", image: "/assets/product/service/web.jpg"},
+        {title: "Special Projects", body: "Starlink estates, industrial IoT, bespoke fabrication, and rapid pop-up spaces.", link: "/products/", image: "/assets/product/service/fingerprint.jpg"}
+      ] %}
+      {% for item in services %}
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+        <img src="{{ item.image }}" alt="{{ item.title }}" class="md:w-1/3 h-48 md:h-auto object-cover">
+        <div class="p-6 space-y-3 flex-1 flex flex-col">
+          <p class="text-sm uppercase tracking-widest text-blue-500">Capability</p>
+          <h3 class="text-2xl font-semibold text-gray-900">{{ item.title }}</h3>
+          <p class="text-gray-600 flex-1">{{ item.body }}</p>
+          <a href="{{ item.link }}" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">
+            Explore details
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10">
+  <div class="text-center">
+    <p class="uppercase tracking-widest text-xs text-blue-500">Engagement blueprint</p>
+    <h2 class="text-3xl font-bold text-gray-900 mt-3">What collaboration with A&B Innovation  feels like.</h2>
+  </div>
+  <div class="grid md:grid-cols-4 gap-6">
+    {% set steps = [
+      {title: "Site pulse", body: "Laser scans, electrical audits, and user interviews to model a living brief."},
+      {title: "Co-create", body: "Experience boards, bill of quantities, and live demos so you see the future state."},
+      {title: "Deploy", body: "Clean-room installation standards with daily reports, drone visuals, and QA sheets."},
+      {title: "Support", body: "24/7 monitoring, response teams, and quarterly optimization workshops."}
+    ] %}
+    {% for step in steps %}
+    <div class="p-6 border border-gray-200 rounded-2xl bg-white shadow-sm">
+      <p class="text-sm uppercase tracking-widest text-blue-500 mb-2">Step {{ loop.index }}</p>
+      <h3 class="text-xl font-semibold text-gray-900">{{ step.title }}</h3>
+      <p class="text-gray-600 mt-2">{{ step.body }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+  <div class="bg-blue-900 text-white rounded-3xl p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+    <div>
+      <p class="uppercase tracking-widest text-xs text-blue-200">Ready when you are</p>
+      <h2 class="text-3xl font-bold mt-3">Let us craft a service blueprint for your site.</h2>
+      <p class="text-blue-100 mt-2">From Kigali HQs to remote field offices, A&B Innovation  deploys the same quality bar everywhere.</p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="/contact/" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:-translate-y-0.5 transition text-center">Schedule a walkthrough</a>
+      <a href="/gallery/" class="border border-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white hover:text-blue-900 transition">See recent builds</a>
+    </div>
+  </div>
+</section>

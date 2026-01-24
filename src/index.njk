@@ -1,0 +1,196 @@
+---
+layout: base.njk
+title: Home
+---
+
+<section class="relative overflow-hidden bg-gradient-to-b from-gray-900 via-blue-900 to-black text-white">
+  <div class="absolute inset-y-0 right-0 opacity-20">
+    <div class="w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="space-y-8">
+      <p class="text-blue-300 uppercase tracking-widest text-xs">A&B Innovation</p>
+      <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight">
+        Engineering modern infrastructure for bold African businesses.
+      </h1>
+      <p class="text-lg text-gray-300">
+        From Starlink backbones to precision CCTV, our technicians craft immersive, reliable environments where security, connectivity, and comfort perform in perfect sync.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="bg-blue-500 hover:bg-blue-600 px-8 py-3 rounded-lg text-lg font-semibold transition shadow-lg ">Book a site visit</a>
+        <a href="/products/" class="bg-transparent border border-white border-opacity-40 hover:bg-white hover:bg-opacity-10 px-8 py-3 rounded-lg text-lg font-semibold transition">Browse equipment</a>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="absolute -top-6 -left-6 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-3xl p-4 text-sm text-gray-200 w-48">
+        <p class="font-semibold text-white">Technician Dispatch</p>
+        <p>Field crews are ready in Kigali and beyond Kigali, fully equipped and compliant with all operational requirements.</p>
+      </div>
+      <div class="bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border border-white border-opacity-10">
+        <img src="/assets/product/Starlink.jpg" alt="A&B Innovation  field engineer on-site" class="w-full h-96 object-cover">
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-6">
+        <div class="bg-white rounded-2xl p-4 text-gray-900 shadow-lg flex items-center space-x-4">
+          <img src="/assets/product/Starlink (1).jpg" alt="Starlink Kit" class="w-16 h-16 rounded-xl object-cover">
+          <div>
+            <p class="text-sm text-gray-500 uppercase tracking-wide">Starlink</p>
+            <p class="text-lg font-semibold">Enterprise Kits</p>
+          </div>
+        </div>
+        <div class="bg-white bg-opacity-10 rounded-2xl p-4 border border-white border-opacity-20 text-white shadow-lg">
+          <p class="text-sm text-blue-200 uppercase tracking-wide mb-1">Live Monitoring</p>
+          <p class="text-2xl font-bold">112</p>
+          <p class="text-xs text-gray-300">Active camera feeds & access control dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="grid lg:grid-cols-3 gap-10">
+    <div class="lg:col-span-2 space-y-10">
+      <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+        <div class="grid md:grid-cols-2">
+          <img src="/assets/sample2.jpeg" alt="Field engineers" class="w-full h-80 object-cover md:h-full">
+          <div class="p-10 space-y-4">
+            <p class="uppercase tracking-wider text-xs text-blue-500">Field Force</p>
+            <h2 class="text-3xl font-bold text-gray-900">Technicians obsessed with craft.</h2>
+            <p class="text-gray-600">We blend precision cabling, immaculate racks, and clean aesthetics so every deployment looks as premium as it performs.</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Fiber fusion & OTDR diagnostics</li>
+              <li>• Cleanroom-level CCTV calibration</li>
+              <li>• Thermal drone surveys for rooftop links</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        {% set cards = [
+          {label:"Connectivity", title:"Starlink + Fiber Hybrid", desc:"Multi-path internet hardened for banking halls and remote mines.", classes:"bg-gradient-to-br from-blue-600 to-gray-900 text-white"},
+          {label:"Security", title:"360-degree Visual Domes", desc:"AI-enabled camera stacks streaming to Kigali SOC.", classes:"bg-gradient-to-br from-blue-600 to-gray-900 text-white"},
+          {label:"Comfort", title:"HVAC Intelligence", desc:"Air quality sensors orchestrate cooling with energy savings.", classes:"bg-gradient-to-br from-blue-600 to-gray-900 text-white"}
+        ] %}
+        {% for card in cards %}
+        <div class="rounded-2xl p-6 relative overflow-hidden shadow-lg {{ card.classes }}">
+          <p class="uppercase tracking-widest text-xs text-blue-200">{{ card.label }}</p>
+          <h3 class="text-2xl font-semibold mt-3">{{ card.title }}</h3>
+          <p class="mt-2 text-sm text-blue-100">{{ card.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="space-y-8">
+      <div class="bg-blue-600 text-white rounded-3xl p-8 shadow-xl space-y-4">
+        <p class="uppercase tracking-wider text-xs text-blue-200">Mission control</p>
+        <h3 class="text-3xl font-bold">Live command dashboards.</h3>
+        <p class="text-blue-100">Operators watch every feed with predictive maintenance prompts and emergency workflows.</p>
+        <div class="bg-white bg-opacity-20 rounded-2xl p-4 text-sm">
+          <p class="text-blue-100 uppercase tracking-widest text-xs">Realtime stats</p>
+          <p class="text-3xl font-bold text-white">99.7%</p>
+          <p class="text-blue-100">Network uptime across corporate campuses.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 shadow-xl space-y-4">
+        <p class="uppercase tracking-wider text-xs text-blue-500">Deployments</p>
+        <h3 class="text-2xl font-bold text-gray-900">Immersive project storytelling.</h3>
+        <p class="text-gray-600">We deliver photo reports, as-built documentation, and immersive walkthroughs that reassure stakeholders.</p>
+        <a href="/gallery/" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition">
+          Step into our gallery
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
+      <div>
+        <p class="uppercase tracking-widest text-xs text-blue-500">Equipment spotlight</p>
+        <h2 class="text-3xl font-bold text-gray-900 mt-3">Curated technology ready for deployment.</h2>
+      </div>
+      <a href="/products/" class="mt-6 md:mt-0 inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-full font-semibold shadow-lg hover:-translate-y-0.5 transition">
+        View catalogue
+      </a>
+    </div>
+
+    <div class="tech-marquee">
+      <div class="tech-marquee-track">
+        <img src="/assets/product/landing/starlink.jpg" alt="">
+        <img src="/assets/product/landing/unifi1.jpeg" alt="">
+        <img src="/assets/product/landing/laptop.jpeg" alt="">
+        <img src="/assets/product/landing/cctv1.jpg" alt="">
+        <img src="/assets/product/landing/network.jpg" alt="">
+        <img src="/assets/product/landing/mouse.jpeg" alt="">
+        <img src="/assets/product/landing/router.jpeg" alt="">
+        <img src="/assets/product/landing/charger.jpg" alt="">
+        <img src="/assets/product/landing/starlink.jpg" alt="">
+        <img src="/assets/product/landing/starlink.jpg" alt="">
+      </div>
+      <div class="tech-marquee-fade-left"></div>
+      <div class="tech-marquee-fade-right"></div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="text-center mb-10">
+    <p class="uppercase text-xs tracking-widest text-blue-500">Insight</p>
+    <h2 class="text-3xl font-bold text-gray-900">Did you know?</h2>
+  </div>
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="rounded-3xl overflow-hidden shadow-lg">
+      <img src="/assets/product/House1.png" alt="Smart home exterior" class="w-full h-full object-cover">
+    </div>
+    <div class="space-y-6">
+      <h3 class="text-3xl font-bold text-gray-900">Install CCTV at home from only <span class="text-blue-600">RWF 60,000</span> with a 4-camera kit.</h3>
+      <p class="text-gray-600 text-lg">
+        A compact A&B Innovation  4-camera kit lets you monitor your gate, living room, backyard, and entry points directly from your smartphone. Enjoy motion alerts, crystal-clear night vision, and cloud backups without breaking the bank.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/products/cctv/" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">See CCTV options</a>
+        <a href="/contact/" class="text-blue-600 font-semibold hover:text-blue-800 transition">Talk to an engineer</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="bg-gray-900 text-white rounded-3xl px-8 py-12 grid lg:grid-cols-2 gap-10 items-center">
+    <div class="space-y-4">
+      <p class="uppercase tracking-widest text-xs text-blue-300">Let’s collaborate</p>
+      <h2 class="text-4xl font-bold">Tell us the experience you want people to feel the moment they walk in.</h2>
+      <p class="text-gray-300">We design custom landing experiences for HQs, retail, data centers, and mixed-use spaces using rigorous engineering and human-centered storytelling.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:-translate-y-0.5 transition">Schedule a discovery call</a>
+        <a href="/gallery/" class="bg-transparent border border-white border-opacity-30 px-6 py-3 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition">See immersive builds</a>
+      </div>
+    </div>
+    <div class="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-2xl p-6 space-y-6">
+      <div class="flex items-center justify-between">
+        <p class="text-sm uppercase tracking-widest text-gray-300">Latest dispatch</p>
+        <span class="text-xs bg-blue-600 bg-opacity-30 text-blue-100 px-3 py-1 rounded-full">Live</span>
+      </div>
+      <div class="space-y-3">
+        <div class="flex items-center justify-between">
+          <p>Kigali HQ retrofit</p>
+          <span class="text-blue-200 text-sm">CCTV + HVAC sync</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <p>Goma mining hub</p>
+          <span class="text-blue-200 text-sm">Starlink redundancy</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <p>Lagos fintech campus</p>
+          <span class="text-blue-200 text-sm">Security command</span>
+        </div>
+      </div>
+      <p class="text-sm text-gray-400">Need a partner to orchestrate everything end-to-end- A&B Innovation  is ready.</p>
+    </div>
+  </div>
+</section>

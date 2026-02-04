@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm exec -- eleventy",
-    "start": "npm exec -- eleventy --serve",
-    "dev": "npm exec -- eleventy --serve --watch"
+    "build": "node ./node_modules/@11ty/eleventy/src/cli.js",
+    "start": "node ./node_modules/@11ty/eleventy/src/cli.js --serve",
+    "dev": "node ./node_modules/@11ty/eleventy/src/cli.js --serve --watch"
   },
   "keywords": [],
   "author": "",

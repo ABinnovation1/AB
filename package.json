@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/@11ty/eleventy/cmd.js --serve",
-  "build": "node ./node_modules/@11ty/eleventy/cmd.js",
-  "dev": "node ./node_modules/@11ty/eleventy/cmd.js --serve --watch"
+    "build": "npx eleventy",
+    "start": "npx eleventy --serve",
+    "dev": "npx eleventy --serve --watch"
   },
   "keywords": [],
   "author": "",
